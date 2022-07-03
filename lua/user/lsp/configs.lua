@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua","rust_analyzer" }
+local servers = { "jsonls", "sumneko_lua","rust_analyzer", "jdtls" }
 
 lsp_installer.setup({
 	automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)

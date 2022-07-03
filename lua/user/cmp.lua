@@ -105,6 +105,7 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        copilot = "[Copilot]"
       })[entry.source.name]
       return vim_item
     end,
@@ -114,6 +115,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "copilot"}
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -129,3 +131,4 @@ cmp.setup {
     native_menu = false,
   },
 }
+vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
