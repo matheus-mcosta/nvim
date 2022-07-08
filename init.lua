@@ -19,3 +19,13 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
+
+require('code_runner').setup({
+  -- put here the commands by filetype
+  filetype = {
+		java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+		python = "python3 -u",
+		typescript = "deno run",
+		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
+	},
+})
