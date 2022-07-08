@@ -23,9 +23,9 @@ require "user.autocommands"
 require('code_runner').setup({
   -- put here the commands by filetype
   filetype = {
-		java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+		java = "cd $dir && javac *.java && java $fileNameWithoutExt",
 		python = "python3 -u",
-		typescript = "deno run",
-		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
+		typescript = "bun run",
+		rust = "cd $dir && cargo run"
 	},
 })
