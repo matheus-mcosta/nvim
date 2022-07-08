@@ -51,6 +51,16 @@ return packer.startup(function(use)
 		end,
 	})
 
+  -- hop
+  use {
+  'phaazon/hop.nvim',
+  branch = 'v2', -- optional but strongly recommended
+  config = function()
+    -- you can configure Hop the way you like here; see :h hop-config
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+}
+
 	use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
@@ -95,7 +105,7 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+	use({ "nvim-telescope/telescope.nvim" })
 
 	-- Treesitter
 	use({
