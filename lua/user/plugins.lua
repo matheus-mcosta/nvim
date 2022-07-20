@@ -51,7 +51,13 @@ return packer.startup(function(use)
 	-- 	end,
 	-- })
 --
+  use({
+    "iamcco/markdown-preview.nvim"})
 	-- hop
+
+  use({"tyru/open-browser.vim"})
+  use({"aklt/plantuml-syntax"})
+  use({"weirongxu/plantuml-previewer.vim"})
 	use({
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended
@@ -109,11 +115,10 @@ return packer.startup(function(use)
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
-  
 	-- LSP
 	use({ "neovim/nvim-lspconfig"})
-	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
-	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
+	use({ "williamboman/nvim-lsp-installer"}) -- simple to use language server installer
+	use({ "jose-elias-alvarez/null-ls.nvim"}) -- for formatters and linters
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
