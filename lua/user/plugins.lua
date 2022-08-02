@@ -50,14 +50,18 @@ return packer.startup(function(use)
 	-- 		end, 100)
 	-- 	end,
 	-- })
---
-  use({
-    "iamcco/markdown-preview.nvim"})
+	--
+	use({ "mfussenegger/nvim-jdtls" })
+	use({ "mfussenegger/nvim-dap" })
+	use({ "majutsushi/tagbar" })
+	use({
+		"iamcco/markdown-preview.nvim",
+	})
 	-- hop
 
-  use({"tyru/open-browser.vim"})
-  use({"aklt/plantuml-syntax"})
-  use({"weirongxu/plantuml-previewer.vim"})
+	use({ "tyru/open-browser.vim" })
+	use({ "aklt/plantuml-syntax" })
+	use({ "weirongxu/plantuml-previewer.vim" })
 	use({
 		"phaazon/hop.nvim",
 		branch = "v2", -- optional but strongly recommended
@@ -68,7 +72,7 @@ return packer.startup(function(use)
 	})
 	-- code runner
 	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
-    use({'norcalli/nvim-colorizer.lua'})
+	use({ "norcalli/nvim-colorizer.lua" })
 
 	use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
@@ -99,15 +103,15 @@ return packer.startup(function(use)
 	use({ "ful1e5/onedark.nvim" })
 	use({ "AlphaTechnolog/onedarker.nvim" })
 	use({ "rebelot/kanagawa.nvim" })
-    use({'ayu-theme/ayu-vim' })
+	use({ "ayu-theme/ayu-vim" })
 
 	-- cmp plugins
-	use({ "hrsh7th/nvim-cmp"})
-	use({ "hrsh7th/cmp-buffer"})
-	use({ "hrsh7th/cmp-path"})
-	use({ "saadparwaiz1/cmp_luasnip"})
-	use({ "hrsh7th/cmp-nvim-lsp",})
-	use({ "hrsh7th/cmp-nvim-lua",})
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "hrsh7th/cmp-buffer" })
+	use({ "hrsh7th/cmp-path" })
+	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-nvim-lua" })
 	-- use({
 	-- 	"zbirenbaum/copilot-cmp",
 	-- 	module = "copilot_cmp",
@@ -116,9 +120,9 @@ return packer.startup(function(use)
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
 	-- LSP
-	use({ "neovim/nvim-lspconfig"})
-	use({ "williamboman/nvim-lsp-installer"}) -- simple to use language server installer
-	use({ "jose-elias-alvarez/null-ls.nvim"}) -- for formatters and linters
+	use({ "neovim/nvim-lspconfig" })
+	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
