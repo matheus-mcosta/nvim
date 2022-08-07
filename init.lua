@@ -32,3 +32,4 @@ require("code_runner").setup({
 	},
 })
 require("colorizer").setup()
+require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
