@@ -122,10 +122,8 @@ return packer.startup(function(use)
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
 	-- LSP
 	use({ "neovim/nvim-lspconfig" })
-	-- use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
+	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-	use({ "williamboman/mason.nvim" })
-	use({ "williamboman/mason-lspconfig.nvim" })
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
 

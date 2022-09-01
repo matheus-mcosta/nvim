@@ -23,7 +23,8 @@ require("user.autocommands")
 require("code_runner").setup({
 	-- put here the commands by filetype
 	filetype = {
-		java = "cd $dir && cd .. && javac teste/AplicacaoTestaUni.java  universidade/Aluno.java universidade/Professor.java universidade/Turma.java universidade/Monitor.java && java teste/$fileNameWithoutExt",
+		java = "cd $dir && cd ../../../..  && mvn package && java -cp target/tocador-1.0-SNAPSHOT.jar app.App",
+
 
 		python = "python3 -u",
 		typescript = "bun run",

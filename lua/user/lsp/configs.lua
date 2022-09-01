@@ -1,17 +1,23 @@
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+	return
+end
+
 local lspconfig = require("lspconfig")
 
-local servers = { "sumneko_lua", "rust_analyser", "tsserver", "pyright", "jdtls" }
+local servers = { "gopls","marksman", "pyright", "tsserver", "jsonls", "sumneko_lua", "rust_analyzer", "jdtls" }
 
-require("mason").setup({
+lsp_installer.setup({
+	automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
 	ui = {
 		icons = {
-			package_installed = "✓",
+			server_installed = "✓",
+			server_pending = "➜",
+			server_uninstalled = "✗",
 		},
 	},
 })
-require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua", "rust_analyser", "tsserver", "pyright", "jdtls" },
-})
+
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
