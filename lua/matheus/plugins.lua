@@ -51,8 +51,7 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-
-
+    -- HOP for movement
     use({
         "phaazon/hop.nvim",
         branch = "v2", -- optional but strongly recommended
@@ -63,6 +62,12 @@ return require('packer').startup(function(use)
     -- mason dependencies
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'mfussenegger/nvim-dap'
+
+    -- statusline
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
 
 end)

@@ -104,6 +104,10 @@ local mappings = {
         i = { "<cmd>:MasonInstall<cr>", "Install Mason" },
 
     },
+    p = {
+        name = "Preview",
+        v = { "<cmd>:Explore<cr>", "Explorer" },
+    }
 
 }
 
