@@ -79,6 +79,7 @@ local opts = {
 }
 
 local mappings = {
+    ["c"] = { "<cmd>:close<cr>", "Close buffer" },
     ["w"] = { "<cmd>:w<cr>", "Write file" },
     f =
     { name = "Telescope",
