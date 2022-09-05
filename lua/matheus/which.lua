@@ -79,7 +79,8 @@ local opts = {
 }
 
 local mappings = {
-    ["c"] = { "<cmd>:close<cr>", "Close buffer" },
+    ["c"] = { "<cmd>:bdelete<cr>", "Close buffer" },
+    ["h"] = { "<cmd>:nohlsearch<cr>", "Remove highlight" },
     ["w"] = { "<cmd>:w<cr>", "Write file" },
     f =
     { name = "Telescope",

@@ -45,6 +45,10 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
+    use 'onsails/lspkind.nvim'
+    use 'kkharji/lspsaga.nvim'
+
+
 
     use {
         "windwp/nvim-autopairs",
@@ -71,5 +75,11 @@ return require('packer').startup(function(use)
 
     use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
-
+    -- comment nvim
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)
