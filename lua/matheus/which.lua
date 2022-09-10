@@ -108,7 +108,8 @@ local mappings = {
     },
     p = {
         name = "Preview",
-        v = { "<cmd>:Explore<cr>", "Explorer" },
+        v = { "<cmd>:NvimTreeToggle<cr>", "Explorer" },
+
     }
 
 }
