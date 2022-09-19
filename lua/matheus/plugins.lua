@@ -82,11 +82,26 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
             'kyazdani42/nvim-web-devicons', -- optional, for file icons
         },
     }
+
+    use 'norcalli/nvim-colorizer.lua'
+    use 'preservim/tagbar'
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
+
 
 end)

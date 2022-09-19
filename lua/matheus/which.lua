@@ -81,6 +81,7 @@ local opts = {
 local mappings = {
     ["c"] = { "<cmd>:bdelete<cr>", "Close buffer" },
     ["h"] = { "<cmd>:nohlsearch<cr>", "Remove highlight" },
+    ["k"] = { "<cmd>:TagbarToggle<cr>", "Tagbar" },
     ["w"] = { "<cmd>:w<cr>", "Write file" },
     f =
     { name = "Telescope",
@@ -111,6 +112,7 @@ local mappings = {
         v = { "<cmd>:NvimTreeToggle<cr>", "Explorer" },
 
     }
+
 
 }
 
