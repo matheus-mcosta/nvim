@@ -74,8 +74,11 @@ local lsp_flags = {
 --    }
 --end
 ----
+local null_ls = require("null-ls")
 require("null-ls").setup({
     sources = {
-        require("null-ls").builtins.formatting.stylua,
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.autopep8,
+        null_ls.builtins.formatting.sql_formatter,
     },
 })

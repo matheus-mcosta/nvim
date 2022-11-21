@@ -99,7 +99,7 @@ local mappings = {
         D = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Type Definition" },
         R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-        f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Formatting" },
+        f = { function() vim.lsp.buf.format { async = true } end, "Formatting" },
     },
     m = {
         name = "Mason",
