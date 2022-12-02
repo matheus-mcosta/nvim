@@ -9,7 +9,7 @@ vim.g.tokyonight_colors = { hint = "orange", error = "#ff4800" }
 vim.cmd [[
 try
 set termguicolors     " enable true colors support
-colorscheme tokyonight
+colorscheme monokai_soda
 
  
 
