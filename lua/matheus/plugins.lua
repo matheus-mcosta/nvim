@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     -- colorscheme
     use 'folke/tokyonight.nvim'
     use 'tanvirtin/monokai.nvim'
+    use 'gruvbox-community/gruvbox'
 
     -- menu popup keymaps
     use {

@@ -80,5 +80,6 @@ require("null-ls").setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.autopep8,
         null_ls.builtins.formatting.sql_formatter,
+        null_ls.builtins.formatting.prettierd,
     },
 })
