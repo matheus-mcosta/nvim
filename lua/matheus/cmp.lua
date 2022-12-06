@@ -13,9 +13,9 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
-    completion = {
-      autocomplete = false
-    },
+    -- completion = {
+    --   autocomplete = false
+    -- },
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),

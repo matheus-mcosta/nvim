@@ -54,7 +54,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- hop keymap
 require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
-keymap("", "f", "<cmd>HopWord<CR>", opts)
+keymap("", "m", "<cmd>HopWord<CR>", opts)
 
 --- In lsp attach function
 local map = vim.api.nvim_buf_set_keymap
