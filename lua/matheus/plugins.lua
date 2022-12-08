@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     use 'gruvbox-community/gruvbox'
     use 'catppuccin/nvim'
 
-    use'p00f/nvim-ts-rainbow'
+    use 'p00f/nvim-ts-rainbow'
 
     -- menu popup keymaps
     use {
@@ -59,14 +59,6 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
-    -- HOP for movement
-    use({
-        "phaazon/hop.nvim",
-        branch = "v2", -- optional but strongly recommended
-
-    })
-
 
     -- mason dependencies
     use 'jose-elias-alvarez/null-ls.nvim'

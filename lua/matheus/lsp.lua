@@ -1,4 +1,4 @@
-local servers = { "sumneko_lua", "rust_analyzer", "gopls", "pyright" }
+local servers = { "sumneko_lua", "rust_analyzer", "gopls", "jedi_language_server", "tsserver" }
 
 require("mason").setup({
     ui = {

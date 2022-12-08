@@ -13,9 +13,9 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
-    -- completion = {
-    --   autocomplete = false
-    -- },
+	-- completion = {
+	--   autocomplete = false
+	-- },
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
@@ -27,7 +27,7 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.close(),
-		["<CR>"] = cmp.mapping.confirm({
+		["<C-k>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
