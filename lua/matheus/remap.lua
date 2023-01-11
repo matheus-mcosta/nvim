@@ -1,4 +1,5 @@
 local nnoremap = require("matheus.keymap").nnoremap
+local inoremap = require("matheus.keymap").inoremap
 
 nnoremap("<leader>pv","<cmd>Ex<CR>")
 nnoremap("<leader>w","<cmd>:w<CR>")
@@ -8,6 +9,10 @@ nnoremap("<leader>fb","<cmd>lua require('telescope.builtin').buffers()<CR>")
 nnoremap("<leader>h","<cmd>:nohlsearch<CR>")
 nnoremap("<leader>c","<cmd>:bdelete<CR>")
 
+
 nnoremap("L", ":bnext<CR>")
 nnoremap("H", ":bprevious<CR>")
+
+
+inoremap("jk","<ESC>")
 
