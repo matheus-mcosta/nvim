@@ -17,4 +17,5 @@ vim.opt.mouse = "a"
 vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
-vim.opt.pumheight = 15
+vim.opt.pumheight = 6
+
