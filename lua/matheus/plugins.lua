@@ -12,6 +12,7 @@ return require("packer").startup(function(use)
 		"rose-pine/neovim",
 		as = "rose-pine",
 	})
+    use 'RRethy/nvim-base16'
 
 	use("rafamadriz/friendly-snippets")
 
