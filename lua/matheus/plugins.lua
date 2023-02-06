@@ -8,11 +8,14 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("EdenEast/nightfox.nvim")
 	use("folke/tokyonight.nvim")
+	use("sainnhe/gruvbox-material")
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine",
 	})
-    use 'RRethy/nvim-base16'
+	use("RRethy/nvim-base16")
+
+	use("p00f/nvim-ts-rainbow")
 
 	use("rafamadriz/friendly-snippets")
 
@@ -63,4 +66,5 @@ return require("packer").startup(function(use)
 	use("simrat39/symbols-outline.nvim")
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
+	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 end)
