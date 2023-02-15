@@ -2,7 +2,7 @@ local nnoremap = require("matheus.keymap").nnoremap
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "sumneko_lua",
+        -- "sumneko_lua",
         "jedi_language_server",
         "gopls",
         "clangd",
@@ -29,14 +29,14 @@ end
 nnoremap("<leader>lf", function()
     vim.lsp.buf.format({ async = true })
 end)
-require("lspconfig").sumneko_lua.setup({ on_attach = on_attach })
+-- require("lspconfig").sumneko_lua.setup({ on_attach = on_attach })
 require("lspconfig").jedi_language_server.setup({ on_attach = on_attach })
 require("lspconfig").pyright.setup({ on_attach = on_attach })
 require("lspconfig").gopls.setup({ on_attach = on_attach })
 require("lspconfig").clangd.setup({ on_attach = on_attach })
 require("lspconfig").rust_analyzer.setup({ on_attach = on_attach })
 require("lspconfig").tsserver.setup({ on_attach = on_attach })
-require("lspconfig/quick_lint_js").setup({ on_attach = on_attach })
+-- require("lspconfig/quick_lint_js").setup({ on_attach = on_attach })
 
 local null_ls = require("null-ls")
 require("null-ls").setup({
