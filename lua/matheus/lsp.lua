@@ -2,7 +2,7 @@ local nnoremap = require("matheus.keymap").nnoremap
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		-- "sumneko_lua",
+		"lua_ls",
 		"jedi_language_server",
 		"gopls",
 		"clangd",
@@ -34,7 +34,7 @@ end)
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- require("lspconfig").sumneko_lua.setup({ on_attach = on_attach })
+require("lspconfig").lua_ls.setup({ on_attach = on_attach })
 require("lspconfig").jedi_language_server.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").pyright.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").gopls.setup({ on_attach = on_attach, capabilities = capabilities })

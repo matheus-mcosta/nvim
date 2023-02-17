@@ -7,4 +7,3 @@ require("matheus.cmp")
 require("matheus.lualine")
 require("matheus.pairs")
 require("matheus.generic")
-

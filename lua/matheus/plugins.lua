@@ -1,70 +1,68 @@
-return require("packer").startup(function(use)
-	-- Packer can manage itself
-	use("wbthomason/packer.nvim")
-	use("nvim-lua/plenary.nvim")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+	"nvim-lua/plenary.nvim",
 	-- colorscheme
-	use("tanvirtin/monokai.nvim")
-	use("jacoborus/tender.vim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("EdenEast/nightfox.nvim")
-	use("folke/tokyonight.nvim")
-	use("sainnhe/gruvbox-material")
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-	})
-	use("RRethy/nvim-base16")
-
-	use("p00f/nvim-ts-rainbow")
-
-	use("rafamadriz/friendly-snippets")
-
-	use({
+	"sainnhe/gruvbox-material",
+	"p00f/nvim-ts-rainbow",
+	"rafamadriz/friendly-snippets",
+	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		version = "0.1.0",
 		-- or                            , branch = '0.1.x',
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-	use({
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+	},
+	{
 		"windwp/nvim-autopairs",
 		config = function()
 			require("nvim-autopairs").setup({})
 		end,
-	})
-	use({
+	},
+	{
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup()
 		end,
-	})
-	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
-	use({
+	},
+	{ "akinsho/bufferline.nvim", version = "v3.*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
+	},
 
-	use("norcalli/nvim-colorizer.lua")
+	"norcalli/nvim-colorizer.lua",
 
-	use({
+	{
 		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
+		build = ":TSUpdate",
+	},
 	-- LSP
-	use({
+	{
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 		"jose-elias-alvarez/null-ls.nvim",
-	})
+	},
 
 	-- CMP
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/nvim-cmp")
-	use("onsails/lspkind-nvim")
-	use("nvim-lua/lsp_extensions.nvim")
-	use("simrat39/symbols-outline.nvim")
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
-end)
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/nvim-cmp",
+	"onsails/lspkind-nvim",
+	"nvim-lua/lsp_extensions.nvim",
+	"simrat39/symbols-outline.nvim",
+	"L3MON4D3/LuaSnip",
+	"saadparwaiz1/cmp_luasnip",
+	{ "tzachar/cmp-tabnine", build = "./install.sh", dependencies = "hrsh7th/nvim-cmp" },
+})
