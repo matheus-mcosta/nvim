@@ -17,7 +17,7 @@ local source_mapping = {
 }
 require("cmp_tabnine.config").setup({
 	max_lines = 1000,
-	max_num_results = 20,
+	max_num_results = 2,
 	sort = true,
 	run_on_every_keystroke = true,
 	snippet_placeholder = "..",
@@ -26,7 +26,7 @@ require("cmp_tabnine.config").setup({
 		-- uncomment to ignore in lua:
 		-- lua = true
 	},
-	show_prediction_strength = false,
+	show_prediction_strength = true,
 })
 cmp.setup({
 	snippet = {
