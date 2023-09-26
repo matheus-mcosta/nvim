@@ -1,4 +1,19 @@
-# 💤 LazyVim
+# Neovim config based on LazyNvim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+
+## Installation 
+Create backup and clone repo
+```bash
+# Make backup
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+# Clone repo
+git clone git@github.com:matheus-mcosta/nvim.git ~/.config/nvim
+
+```
+Check installation inside Neovim
+```vim
+:checkhealth
+``` 
