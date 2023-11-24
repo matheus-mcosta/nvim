@@ -1,0 +1,6 @@
+require("settings.set")
+require("settings.plugins")
+require("settings.keymap")
+require("settings.remap")
+-- require("settings.lsp")
+-- require("settings.cmp")
