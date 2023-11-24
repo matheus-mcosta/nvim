@@ -10,7 +10,7 @@ nnoremap("<leader>fb", builtin.buffers)
 nnoremap("<leader>fh", builtin.help_tags)
 
 nnoremap("<leader>h", "<cmd>:nohlsearch<CR>")
-nnoremap("<leader>c", "<cmd>:bdelete<CR>")
+nnoremap("<leader>bd", "<cmd>:bdelete<CR>")
 
 
 nnoremap("L", ":bnext<CR>")

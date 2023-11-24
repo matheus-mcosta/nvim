@@ -18,7 +18,7 @@ nnoremap("<leader>gD", vim.lsp.buf.declaration)
 nnoremap("<leader>gi", vim.lsp.buf.implementation)
 nnoremap("<leader>gr", require("telescope.builtin").lsp_references)
 
-nnoremap("<leader>lf", function()
+nnoremap("<leader>cf", function()
     vim.lsp.buf.format({ async = true })
 end)
 
