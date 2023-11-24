@@ -51,6 +51,22 @@ require("lazy").setup({
       'saadparwaiz1/cmp_luasnip',
       'rafamadriz/friendly-snippets',
     }
+  },
+  -- Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+    "zbirenbaum/copilot-cmp",
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end
   }
 
 })
