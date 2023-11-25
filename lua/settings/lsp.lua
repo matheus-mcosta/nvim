@@ -39,3 +39,6 @@ require("nvim-treesitter.configs").setup({
         -- termcolors = {} -- table of colour name strings
     },
 })
+require("mason-null-ls").setup({
+    ensure_installed = { "stylua", "jq" }
+})
