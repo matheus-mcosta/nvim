@@ -10,9 +10,9 @@ require("mason-lspconfig").setup_handlers {
         require("lspconfig")[server_name].setup {}
     end,
 }
-nnoremap("<leader>li", vim.lsp.buf.hover)
-nnoremap("<leader>lr", vim.lsp.buf.rename)
-nnoremap("<leader>la", vim.lsp.buf.code_action)
+nnoremap("<leader>ci", vim.lsp.buf.hover)
+nnoremap("<leader>cr", vim.lsp.buf.rename)
+nnoremap("<leader>ca", vim.lsp.buf.code_action)
 nnoremap("<leader>gd", vim.lsp.buf.definition)
 nnoremap("<leader>gD", vim.lsp.buf.declaration)
 nnoremap("<leader>gi", vim.lsp.buf.implementation)
