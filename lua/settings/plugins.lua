@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     "nvim-lua/plenary.nvim",
     { 'rose-pine/neovim',        name = 'rose-pine' },
+    { 'Yazeed1s/oh-lucy.nvim' },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
