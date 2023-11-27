@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "nvim-lua/plenary.nvim",
-    { 'rose-pine/neovim',        name = 'rose-pine' },
+    { 'rose-pine/neovim',     name = 'rose-pine' },
     { 'Yazeed1s/oh-lucy.nvim' },
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -22,7 +22,7 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
-            "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+            "3rd/image.nvim",              -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
     {
@@ -30,6 +30,12 @@ require("lazy").setup({
         tag = '0.1.4',
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require('gitsigns').setup()
+        end,
     },
     {
         "numToStr/Comment.nvim",
