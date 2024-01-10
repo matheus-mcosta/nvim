@@ -55,6 +55,12 @@ cmp.setup({
         { name = "luasnip" },
         { name = "path" },
     }),
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.abbr = string.sub(vim_item.abbr, 1, 30)
+            return vim_item
+        end
+    },
 })
 
 require("copilot").setup()
