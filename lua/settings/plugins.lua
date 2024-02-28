@@ -79,9 +79,6 @@ require("lazy").setup({
             "williamboman/mason.nvim",
             "nvimtools/none-ls.nvim",
         },
-        config = function()
-            require("null-ls").setup()
-        end,
     },
 
     -- CMP
