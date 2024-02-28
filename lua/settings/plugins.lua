@@ -16,6 +16,7 @@ require("lazy").setup({
     { 'rose-pine/neovim',     name = 'rose-pine' },
     { 'Yazeed1s/oh-lucy.nvim' },
     { 'lervag/vimtex' },
+    { 'APZelos/blamer.nvim' },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
