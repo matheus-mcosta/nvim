@@ -74,6 +74,12 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 	},
 	{
+		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvimtools/none-ls-extras.nvim",
+		},
+	},
+	{
 		"jay-babu/mason-null-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
