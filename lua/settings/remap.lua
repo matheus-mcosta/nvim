@@ -2,7 +2,7 @@ local nnoremap = require("settings.keymap").nnoremap
 local inoremap = require("settings.keymap").inoremap
 local builtin = require('telescope.builtin')
 
-nnoremap("<leader>pv", "<cmd>:Neotree toggle<CR>")
+nnoremap("<leader>pv", "<cmd>:Neotree toggle filesystem reveal right<CR>")
 nnoremap("<leader>w", "<cmd>:w<CR>")
 nnoremap("<leader>ff", builtin.find_files)
 nnoremap("<leader>fg", builtin.live_grep)
