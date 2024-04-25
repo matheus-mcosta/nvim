@@ -16,5 +16,6 @@ nnoremap("<leader>bd", "<cmd>:bdelete<CR>")
 nnoremap("L", ":bnext<CR>")
 nnoremap("H", ":bprevious<CR>")
 
+nnoremap("<leader>lr", "<cmd>:LspRestart<CR>")
 
 inoremap("jk", "<ESC>")
