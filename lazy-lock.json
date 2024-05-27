@@ -30,5 +30,6 @@
   "plenary.nvim": { "branch": "master", "commit": "f7adfc4b3f4f91aab6caebf42b3682945fbc35be" },
   "rose-pine": { "branch": "main", "commit": "7777aa953c1561fb93d595b33bf019b2ef4af9de" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
+  "trouble.nvim": { "branch": "main", "commit": "a8264a65a0b894832ea642844f5b7c30112c458f" },
   "vimtex": { "branch": "master", "commit": "73605f8b7655301ea47a2c355500ab4984f41b91" }
 }
