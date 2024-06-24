@@ -54,6 +54,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.golangci_lint,
 		null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.diagnostics.actionlint,
+        null_ls.builtins.diagnostics.semgrep,
         require("none-ls.diagnostics.flake8"),
 		null_ls.builtins.code_actions.gitsigns,
 		null_ls.builtins.code_actions.gomodifytags,
