@@ -22,7 +22,7 @@ opt.relativenumber = true
 -- Tabs & indentation
 opt.expandtab = true
 opt.tabstop = 4
-opt.shiftwidth = 4 
+opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.smartindent = true
 
@@ -58,6 +58,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank({ timeout = 500 })
     end,
 })
+
+--- Buffers
+
+vim.o.showtabline = 2
+vim.o.tabline = "%!v:lua.require('bufferline').tabline()"
+
+
 
 -- =========================
 -- Keymap Helper
