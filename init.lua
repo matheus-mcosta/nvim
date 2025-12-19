@@ -95,6 +95,7 @@ M.nnoremap("<leader>fg", builtin.live_grep)
 M.nnoremap("<leader>fb", builtin.buffers)
 M.nnoremap("<leader>fh", builtin.help_tags)
 
+
 M.nnoremap("<leader>h", "<cmd>:nohlsearch<CR>")
 M.nnoremap("<leader>bd", "<cmd>:bdelete<CR>")
 
@@ -102,6 +103,7 @@ M.nnoremap("L", ":bnext<CR>")
 M.nnoremap("H", ":bprevious<CR>")
 
 M.nnoremap("<leader>lr", "<cmd>:LspRestart<CR>")
+M.nnoremap("<leader>cf", vim.lsp.buf.format, { desc = "LSP format" })
 
 M.inoremap("jk", "<ESC>")
 
